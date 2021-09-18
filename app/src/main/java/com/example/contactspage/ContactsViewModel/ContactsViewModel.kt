@@ -16,8 +16,13 @@ class ContactsViewModel: ViewModel() {
             contactsRepository.saveContact(contacts)
         }
     }
-
     fun getAllContacts(){
         contactsLiveData = contactsRepository.getAllContacts()
+    }
+    fun fetchContacts(){
+        contactsLiveData = contactsRepository.fetchContacts()
+    }
+    fun getContactId(id: Int){
+        contactsLiveData = ContactsRepository.getContactId(id)
     }
 }
